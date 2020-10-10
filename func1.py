@@ -1,6 +1,5 @@
 from loanmetadata import data
 
-
 def LoanProcess(CustName,Score,ReqAmt):
     if Score in range(50,400) and ReqAmt >= 10000 and ReqAmt<=40000:
         print(f'Congratulations {CustName} you are approved for ${ReqAmt} You can also consider:')
@@ -9,7 +8,7 @@ def LoanProcess(CustName,Score,ReqAmt):
                 print(f''' ${criteria['Loan']} at {criteria['Interest']}% interest for {criteria['Duration']} Months''')
     elif ReqAmt < 10000 or ReqAmt > 40000:
         print('Please enter amount in between $10000 to $40000')
-    elif Score < 50:
-        print('Request Denied low score')
-    else:
+    elif Score > 399:
         print('Your request is Denied. Credit Score out of range')
+    else:
+        print('Your request is Denied due to low credit score!')
