@@ -1,7 +1,7 @@
 import dbconn
 import loadempmdm as emdm
-#import loadloanmdm lmdm
-#import loaneng le
+#import loadloanmdm as lmdm
+#import loaneng as le
 import sys
 
 args_list = sys.argv
